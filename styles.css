@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    position:relative;
+    display: block;
+}
+
+.nav-bar{
+    display: flex;
+    
+}
+
+.list-item{
+    list-style: none;
+}
