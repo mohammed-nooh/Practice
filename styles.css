@@ -26,3 +26,35 @@ body{
     cursor: pointer;
 }
 
+.container{
+    max-width: 600px;
+    margin:auto;
+}
+
+.container-center{
+    text-align: center;
+}
+
+.heading{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.textinput{
+    font-size: 1.5rem;
+    text-align: center;
+    margin:1rem;
+
+}
+
+.inputcontainer{
+    text-align: center;
+    
+}
+
+
+.outputcontainer{
+    border:2px solid black;
+    height:2rem;
+    width:300px;
+}
