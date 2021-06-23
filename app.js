@@ -2,11 +2,13 @@ var btnClickAdd=document.querySelector("#add");
 var btnClickSub=document.querySelector("#subtract");
 var btnClickMul=document.querySelector("#multiply");
 var btnClickDiv=document.querySelector("#divide");
-var outputDiv=document.querySelector("#outputContainer");
+
 
 
 var no1=document.querySelector("#no1");
 var no2=document.querySelector("#no2");
+
+
 
 
 
@@ -21,6 +23,7 @@ btnClickAdd.addEventListener("click",addEvent);
 btnClickSub.addEventListener("click",subEvent);
 btnClickMul.addEventListener("click",mulEvent);
 btnClickDiv.addEventListener("click",divEvent);
+var outputDiv=document.querySelector("#outputContainer");
 
 
 function addEvent(){
@@ -29,7 +32,8 @@ function addEvent(){
     console.log(no1.value);
     console.log(no2.value);
     console.log(result+" is the output");
-    document.querySelector("#outputContainer").innerText=result;
+    outputDiv.innerHTML=result.toString();
+
 }
 function subEvent(){
     // console.log("clicked");
