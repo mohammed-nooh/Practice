@@ -3,6 +3,7 @@
 :root{
     --primary-color:#DC2626;
     --text:white;
+    --secondary-color:#FECACA;
 }
 
 body{
@@ -50,6 +51,15 @@ body{
 .inputcontainer{
     text-align: center;
     
+}
+
+.but{
+    font-size:1.5rem;
+    padding:0.5rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    margin:1rem 0rem;
+
 }
 
 
