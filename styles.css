@@ -6,12 +6,3 @@
     position:relative;
     display: block;
 }
-
-.nav-bar{
-    display: flex;
-    
-}
-
-.list-item{
-    list-style: none;
-}
