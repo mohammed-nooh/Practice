@@ -32,7 +32,7 @@ function addEvent(){
     console.log(no1.value);
     console.log(no2.value);
     console.log(result+" is the output");
-    outputDiv.innerHTML=result.toString();
+    outputDiv.innerText=result;
 
 }
 function subEvent(){
@@ -40,7 +40,8 @@ function subEvent(){
     var result=(parseInt(no1.value,10)-parseInt(no2.value,10));
     console.log(no1.value);
     console.log(no2.value);
-    console.log(result+" is the output")
+    console.log(result+" is the output");
+    outputDiv.innerText=result;
 }
 
 function mulEvent(){
@@ -48,7 +49,8 @@ function mulEvent(){
     var result=(parseInt(no1.value,10)*parseInt(no2.value,10));
     console.log(no1.value);
     console.log(no2.value);
-    console.log(result+" is the output")
+    console.log(result+" is the output");
+    outputDiv.innerText=result;
 }
 
 function divEvent(){
@@ -56,5 +58,6 @@ function divEvent(){
     var result=(parseInt(no1.value,10)/parseInt(no2.value,10));
     console.log(no1.value);
     console.log(no2.value);
-    console.log(result+" is the output")
+    console.log(result+" is the output");
+    outputDiv.innerText=result;
 }
