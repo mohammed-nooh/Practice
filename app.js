@@ -13,6 +13,17 @@ function onSubmit(e){
     if(nameInput.value==='' || emailInput.value===''){
         msgElement.classList.add("error");
         msgElement.innerHTML="please enter all fields";
+
+        setTimeout(()=>msgElement.remove(),3000);
+    }else{
+        const listItem=document.createElement("li");
+
+        listItem.appendChild(document.createTextNode(`name : ${nameInput.value} email : ${emailInput.value} `));
+
+        userList.appendChild(listItem);
+
+        nameInput.value="";
+        emailInput.value="";
     }
 
 }
