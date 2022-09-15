@@ -4,11 +4,15 @@ var getAPIBtn=document.getElementById("get-API");
 
 var getJsonBtn=document.getElementById("get-json");
 
+var postDataBtn=document.getElementById("addPost");
+
 getJsonBtn.addEventListener("click",getJsonFn);
 
 getTextBtn.addEventListener("click",getTextFn);
 
 getAPIBtn.addEventListener("click",getAPIFn);
+
+postDataBtn.addEventListener("submit",postFn);
 
 
 function getTextFn(e){
@@ -64,4 +68,20 @@ function getAPIFn(e){
         })
         output.innerHTML=outputhtml;
     })
+}
+
+function postFn(e){
+    e.preventDefault();
+    let title=document.getElementById("form-title").value;
+    let body=document.getElementById("form-body").value;
+    fetch("https://jsonplaceholder.typicode.com/posts",{
+        method:"POST",
+        headers:{
+            "Accept":"application/json,text/plain,*/*",
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify({title:title,body:body})
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
 }
