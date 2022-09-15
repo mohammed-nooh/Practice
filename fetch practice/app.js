@@ -1,11 +1,14 @@
 var getTextBtn=document.getElementById("get-text");
 
+var getAPIBtn=document.getElementById("get-API");
 
 var getJsonBtn=document.getElementById("get-json");
 
 getJsonBtn.addEventListener("click",getJsonFn);
 
 getTextBtn.addEventListener("click",getTextFn);
+
+getAPIBtn.addEventListener("click",getAPIFn);
 
 
 function getTextFn(e){
@@ -40,5 +43,25 @@ function getJsonFn(e){
             list.append(listItem);
             output.append(list);
         })
+    })
+}
+
+
+function getAPIFn(e){
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(res => res.json())
+    .then((data) => {
+        let outputhtml=`<h2>Posts</h2>`;
+        let output=document.getElementById("output");
+
+        data.forEach((user) => {
+            outputhtml += `
+            <div>
+            <h3>${user.title}</h3>
+            <p>${user.body}</p>
+            </div>
+            `;  
+        })
+        output.innerHTML=outputhtml;
     })
 }
